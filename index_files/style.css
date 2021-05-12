@@ -1,0 +1,27 @@
+.myclass{
+    border-radius:0.9cm;
+    border: solid black 1px;
+
+    margin-top: 0.8cm;
+
+    width: 400px;
+    height: 200px;
+    
+}
+#logo{
+    margin-top: 0.65cm;
+    font-size:30px;
+}
+#img{
+    margin-top: -0.25cm;
+    font-size:32px;
+}
+.container
+{
+    display:flex;flex-direction:row ;flex-wrap: wrap ;width:100%;
+    justify-content:space-evenly;
+   justify-content: space-around;
+    width: 100%;
+    height: auto;
+  
+}

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+
+   
+    padding: 0;
+}
+
+
+html{
+
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.myclass {
+    position: relative;
+    border-radius: 0.9cm;
+    border: solid black 1px;
+    margin-top: 0.8cm;
+    width: 400px;
+    height: 189px;
+
+ 
+}
+
+
+#logo {
+    margin-top: 0.65cm;
+    font-size: 30px;
+}
+.navbar{
+    position: sticky;
+    top: 0vh;
+    z-index: 5;
+
+    width: 99vw;
+   
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content:space-around;
+
+
+    width: 100%;
+   
+    min-height: 100vh;
+    max-height: 4000vh;
+
+
+
+    
+
+
+}
+.newcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content:space-around;
+    align-content: center;
+    width: 100%;
+
+    min-height: 100vh;
+    max-height: 4000vh;
+
+}
+
+
+ .box:hover {
+    cursor: pointer;
+    animation: hello 0.5s 0s ease-in-out forwards;
+} 
+
+
+
+@keyframes hello {
+    from {}
+    to {
+        height: 60vh;
+        transform: translateY(-2cm);
+           
+        
+    }
+}
+
+p {
+    display: inline;
+}
+
+.paras {
+    display: none;
+}
+
+footer {
+    background-color: black;
+    margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    position: sticky;
+    width: 100vw;
+    bottom: 0vh;
+}
+
+footer h7 {
+    height: 7vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    position: relative;
+}
+h7 div{
+
+    position:absolute;
+    display: flex;
+    justify-content: space-evenly;
+    right: 2vw;
+    width: 15vw;
+ 
+
+}
+a, a:hover ,a:focus,a:active{
+    text-decoration: none;
+    color: inherit;
+}
