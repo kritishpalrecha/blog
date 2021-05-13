@@ -1,12 +1,10 @@
 let box = document.querySelectorAll(".card-body")
 let para = document.querySelectorAll(".paras")
-
+let div=document.querySelectorAll(".myclass")
 
  
 box[0].addEventListener("mouseleave", left)
 box[0].addEventListener("mouseenter", ok)
-
-
 
 
 
@@ -22,26 +20,23 @@ function left() {
          clearInterval(mytimer)
          
      }, 200);
-    }
- 
+    }    
+    function ok()
 
-function ok()
-
-{
-
-     
-    setTimeout(() => {
-
-
-
-        para[0].classList.remove("paras")
-        
-
-
-    }, 200)
+    {
+         
+        setTimeout(() => {
     
-
-}
+    
+    
+            para[0].classList.remove("paras")
+            
+    
+    
+        }, 200)
+    
+    
+    }
 
 box[1].addEventListener("mouseleave", left1)
 box[1].addEventListener("mouseenter", ok1)
@@ -164,6 +159,7 @@ let btns=document.querySelectorAll(".nav-link")
 btns[2].addEventListener("click",con)
 btns[0].addEventListener("click",con2)
 
+
 function con()
 {
  
@@ -193,3 +189,14 @@ else if(scrollY<290)
 }
 
 })
+
+let data=document.getElementById("data")
+window.addEventListener('scroll',()=>{
+    if(scrollY>700){
+    document.querySelector(".about").classList.add("abo")
+        setTimeout(()=>{
+    data.classList.remove("paras")},990)}
+})
+
+
+
