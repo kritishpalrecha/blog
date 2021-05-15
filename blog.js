@@ -1,202 +1,71 @@
-let box = document.querySelectorAll(".card-body")
-let para = document.querySelectorAll(".paras")
-let div=document.querySelectorAll(".myclass")
 
- 
-box[0].addEventListener("mouseleave", left)
-box[0].addEventListener("mouseenter", ok)
-
-
-
-function left() {
-      let mytimer= setInterval(() => {
-         para[0].classList.add("paras")
-         
-     }, 0.1);
-
-
-     setTimeout(() => {
-
-         clearInterval(mytimer)
-         
-     }, 200);
-    }    
-    function ok()
-
-    {
-         
-        setTimeout(() => {
-    
-    
-    
-            para[0].classList.remove("paras")
-            
-    
-    
-        }, 200)
-    
-    
+let div = document.querySelectorAll(".myclass")
+$(document).ready(function () {
+    $('.card-body').hover(function () {
+        $(this).children('.paras').fadeIn(600)
     }
 
-box[1].addEventListener("mouseleave", left1)
-box[1].addEventListener("mouseenter", ok1)
+
+        , function () {
+
+
+            $(this).children('.paras').hide(1)
+
+        })
 
 
 
-function left1() {
-      let mytimer= setInterval(() => {
-         para[1].classList.add("paras")
-         
-     }, 0.1);
 
 
-     setTimeout(() => {
+    function con() {
 
-         clearInterval(mytimer)
-         
-     }, 200);
+        $('.container').removeClass('container').addClass('newcontainer');
+
+
     }
- 
 
-function ok1()
+    function con2() {
 
-{
-     
-    setTimeout(() => {
+        $('.newcontainer').removeClass('newcontainer').addClass('container');
 
 
-
-        para[1].classList.remove("paras")
-        
-
-
-    }, 200)
-
-
-}
-
-
-box[2].addEventListener("mouseleave", left2)
-box[2].addEventListener("mouseenter", ok2)
-
-
-
-function left2() {
-      let mytimer= setInterval(() => {
-         para[2].classList.add("paras")
-         
-     }, 0.1);
-
-
-     setTimeout(() => {
-
-         clearInterval(mytimer)
-         
-     }, 200);
     }
- 
-
-function ok2()
-
-{
-     
-    setTimeout(() => {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 305) {
+            con()
 
 
+        }
+        else if ($(document).scrollTop() < 290) {
+            con2()
 
-        para[2].classList.remove("paras")
-        
-
-
-    }, 200)
-
-
-}
+        }
+    })
 
 
 
-box[3].addEventListener("mouseleave", left3)
-box[3].addEventListener("mouseenter", ok3)
+    $('#data').hide()
+
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 400) {
+            $('.about').animate({ width: '60vw' }, 2000)
+            $('#data').fadeIn(3000)
+
+
+        }
 
 
 
-function left3() {
-      let mytimer= setInterval(() => {
-         para[3].classList.add("paras")
-         
-     }, 0.1);
 
-
-     setTimeout(() => {
-
-         clearInterval(mytimer)
-         
-     }, 200);
-    }
- 
-
-function ok3()
-
-{
-     
-    setTimeout(() => {
-
-
-
-        para[3].classList.remove("paras")
-        
-
-
-    }, 200)
-
-
-}
-
-
-
-let contain=document.querySelector(".container")
-let btns=document.querySelectorAll(".nav-link")
-btns[2].addEventListener("click",con)
-btns[0].addEventListener("click",con2)
-
-
-function con()
-{
- 
-    contain.classList.remove("container")
-    contain.classList.add("newcontainer")
-
+    })
+    $('#abt').click(function(){
+        $('#data').hide()
     
-}
+        $('#data').fadeIn(2000)
+         
 
-function con2()
-{
- 
-    contain.classList.remove("newcontainer")
-    contain.classList.add("container")
 
- 
-    
-}
-window.addEventListener('scroll',()=>{
-    if(scrollY>305)
-{
-    con()
-}
-else if(scrollY<290)
-{
-    con2()
-}
+    })
 
 })
-
-let data=document.getElementById("data")
-window.addEventListener('scroll',()=>{
-    if(scrollY>700){
-    document.querySelector(".about").classList.add("abo")
-        setTimeout(()=>{
-    data.classList.remove("paras")},990)}
-})
-
-
 
