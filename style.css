@@ -86,7 +86,7 @@ width: 30vw;
 }
 
 .abo{
-    animation:about 1s ease-in-out forwards;
+    animation:about 1.3s ease-in-out forwards;
 
 }
 @keyframes about {
@@ -135,10 +135,13 @@ width: 30vw;
     max-height: 4000vh;
 }
 
-.box:hover{
+ .goo{
+     text-decoration: green;
     cursor: pointer;
-    animation: hello 0.7s 0s ease-in-out forwards;
-}
+    animation: hello 0.7s 0s ease-in-out;
+    animation-fill-mode:forwards ;
+
+} 
 
 @keyframes hello {
     from {}
@@ -195,4 +198,10 @@ a, a:hover, a:focus, a:active {
 svg {
     height: 1.2rem;
 }
-
+p{
+    cursor: default;
+}
+.shadoww{
+box-shadow: 1px 1px 12px 5px rgb(165, 165, 165);
+border-radius: 0.9cm;
+}

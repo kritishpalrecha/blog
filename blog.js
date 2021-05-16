@@ -1,18 +1,56 @@
 
 let div = document.querySelectorAll(".myclass")
 $(document).ready(function () {
-    $('.card-body').hover(function () {
-        $(this).children('.paras').fadeIn(600)
+    $('.box').hover(function () {
+        $(this).addClass("shadoww")
+        $(this).click(function(){
+
+        
+        })
+
+
     }
 
 
         , function () {
 
 
-            $(this).children('.paras').hide(1)
+            $(this).removeClass("shadoww")
+      
+          
+            
 
         })
 
+
+
+  
+   $('.box').click(function () {
+       
+     
+            $(this).toggleClass('goo')
+
+
+        })
+
+        $('.box').mouseleave(function () {
+       
+     
+            $(this).removeClass('goo')
+
+        })
+
+
+
+  
+            
+                
+                
+
+
+
+            
+          
 
 
 
@@ -31,12 +69,12 @@ $(document).ready(function () {
 
     }
     $(window).scroll(function () {
-        if ($(document).scrollTop() > 305) {
+        if ($(document).scrollTop() > 345) {
             con()
 
 
         }
-        else if ($(document).scrollTop() < 290) {
+        else if ($(document).scrollTop() < 170) {
             con2()
 
         }
@@ -48,7 +86,7 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         if ($(document).scrollTop() > 400) {
-            $('.about').animate({ width: '60vw' }, 2000)
+            $('.about').addClass("abo")
             $('#data').fadeIn(3000)
 
 
@@ -61,7 +99,7 @@ $(document).ready(function () {
     $('#abt').click(function(){
         $('#data').hide()
     
-        $('#data').fadeIn(2000)
+        $('#data').fadeIn(3000)
          
 
 
