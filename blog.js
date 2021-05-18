@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 
             $(this).removeClass("shadoww")
-      
+            
           
             
 
@@ -24,33 +24,35 @@ $(document).ready(function () {
 
 
 
-  
+
    $('.box').click(function () {
+    
        
      
             $(this).toggleClass('goo')
+           
 
-
+        })
+        $('.card-body').click(function () {
+            $(this).children('.paras').fadeIn(600)
         })
 
         $('.box').mouseleave(function () {
+            $('.card-body').mouseleave(function () {
+                $(this).children('.paras').hide(1)
+            })
        
      
             $(this).removeClass('goo')
 
         })
 
-
-
-  
-            
+      
+    
+    
+           
+             
                 
-                
-
-
-
-            
-          
 
 
 
